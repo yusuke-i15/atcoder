@@ -12,3 +12,8 @@ N = 2
 print((M+N-1)//N)
 print(int((M+N-1)//N))
 print("------------")
+
+print(-(-M//N))
+
+#四捨五入
+print(int(round(2.50000000000001)))
