@@ -5,25 +5,6 @@ Created on Mon Jul 11 21:32:28 2022
 @author: 81702
 """
 
-"""
-2 2
-2 1 2
-1 2
-0 1
-
-5 2
-3 1 2 5
-2 2 3
-1 0
-o 8
-
-2 3
-2 1 2
-1 1
-1 2
-0 0 1
-0
-"""
 
 def check(A):
     count_1 = 0
@@ -56,7 +37,7 @@ for i in range(M):
     ks[i] = list(map(int,input().split()))
     
 p = list(map(int,input().split()))
-print(ks)
+
 sw = [0]*M
 for i in range(M):
     for j in range(ks[i][0]):
