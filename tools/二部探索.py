@@ -28,12 +28,24 @@ def meguru_bisect(ng, ok,key):
         else:
             ng = mid
     return ok
+
+"""
+meguru_biserct(左端、右端、調べたい値)
+左端=-1としないと全てを調べられない
+"""
+
 numbers = [0, 1, 2, 3, 4, 5, 6, 7, 7, 8, 9]
+print(len(numbers))
 a = meguru_bisect(0,8,0)
 print(a,numbers[a])
 a = meguru_bisect(-1,8,0)
 print(a,numbers[a])
-a = meguru_bisect(0,10,9)
+a = meguru_bisect(-1,11,8.5)
 print(a,numbers[a])
-a = meguru_bisect(0,9,9)
+a = meguru_bisect(-1,10,8.5)
 print(a,numbers[a])
+a = meguru_bisect(-1,9,8.5)
+print(a,numbers[a])
+
+numbers = [0,1,3]
+print(meguru_bisect(-1,2,4))
