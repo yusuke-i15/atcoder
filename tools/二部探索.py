@@ -4,7 +4,7 @@ Created on Sun Aug 21 23:10:49 2022
 
 @author: 81702
 """
-
+import bisect
 from bisect import bisect_right, bisect_left
 def is_ok(mid,key):
     # 条件を満たすかどうか？問題ごとに定義
@@ -49,3 +49,14 @@ print(a,numbers[a])
 
 numbers = [0,1,3]
 print(meguru_bisect(-1,2,4))
+print("-------------")
+import time 
+temp = 10**15
+numbers = range(temp)
+s = time.time()
+print(numbers[meguru_bisect(-1,temp-1,temp/2)])
+print(time.time()-s)
+s = time.time()
+print(numbers[bisect.bisect(numbers,temp/2)-1])
+print(time.time()-s)
+#bisect.bisectの方が早い?C - ダーツでTLE

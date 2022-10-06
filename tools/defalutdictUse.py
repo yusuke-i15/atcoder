@@ -1,6 +1,9 @@
 from collections import defaultdict
 dic_S = defaultdict(int)
 
+seen = defaultdict(lambda: defaultdict(int))
+seen[0][2] = 1
+
 N = int(input())
 S = list(input())
 
