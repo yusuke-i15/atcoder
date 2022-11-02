@@ -10,7 +10,7 @@ for i in t:
     t_s += i
 ans = [s_s,t_s]
 ans.sort()
-if ans[0] == s_s :
+if ans[0] == s_s and s_s != t_s:
     print("Yes")
 else:
     print("No")
