@@ -1,9 +1,6 @@
-a,b = map(int,input().split())
-if a <= 0 and b >= 0:
-    print("Zero")
-else:
-    temp = a + min(b,0)
-    if temp%2 == 0 or a > 0:
-        print("Positive")
-    else:
-        print("Negative")
+import math
+A,B,C,D = map(int,input().split())
+B_temp = B - (B//C+B//D - B//(math.lcm(C,D)))
+A = A-1
+A_temp = A - (A//C+A//D - A//(math.lcm(C,D)))
+print(B_temp-A_temp)
