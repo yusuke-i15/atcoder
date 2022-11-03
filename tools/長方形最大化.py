@@ -17,6 +17,7 @@ for i in range(H):
         temp = A[i][j]
         right = j
         left = j
+        #妥協あり
         for k in range(j,W):
             if A[i][k] >= temp:
                 right += 1

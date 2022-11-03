@@ -1,6 +1,11 @@
 import math
 def lcm(a,b):
     return a*b//math.gcd(a,b)
+
+#複数の最大公約数
+import numpy as np
+x = np.array([4,16,8])
+print(np.gcd.reduce(x))
 """
 from collections import defaultdict
 def pf(n):
