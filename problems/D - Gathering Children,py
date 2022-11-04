@@ -1,0 +1,22 @@
+S = input()
+r = 0
+l = 0
+ans = [0]*len(S)
+for i,s in enumerate(S):
+    if s == "R":
+        r += 1
+        l = 0
+    elif s == "L":
+        l += 1
+        if r*l >= 1:
+            ir = i-1
+            il = i
+            ans[ir] += (r+1)//2
+            ans[il] += r//2
+            r = 0
+        if l%2 == 0:
+            ans[ir] += 1
+        else:
+            ans[il] += 1
+    
+print(*ans)
