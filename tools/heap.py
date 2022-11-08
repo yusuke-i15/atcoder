@@ -4,6 +4,19 @@ Created on Fri Jul 29 20:33:16 2022
 
 @author: 81702
 """
+#D-Powerful Discount Tickets
+import heapq
+#listの各要素を-1してからhiappopで最小値をとることで最大値を取り出している
+N,M = map(int,input().split())
+A = list(map(lambda x: int(x)*(-1),input().split()))
+heapq.heapify(A)
+
+for i in range(M):
+    tmp_min = heapq.heappop(A)
+    heapq.heappush(A,-tmp_min//2*(-1))
+print(-sum(A))
+
+
 import heapq
 
 Q = int(input())
