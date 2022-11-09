@@ -1,5 +1,4 @@
-n = int(input())
-n_s = n
+A,B = map(int,input().split())
 
 def factorize(n):
     n_root = int(n**0.5)
@@ -11,4 +10,8 @@ def factorize(n):
     if n != 1:
         facto.append(n)
     return facto
-print("{}:".format(n_s),*factorize(n))
+
+A_set = set(factorize(A))
+B_set = set(factorize(B))
+gc = A_set & B_set | {1}
+print(len(gc))
