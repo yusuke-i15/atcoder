@@ -1,3 +1,5 @@
+#任意の2頂点の対の最短経路を求める
+#AOJ All Pairs Shortest Path
 V,E = map(int,input().split())
 
 inf = float("inf")
@@ -10,6 +12,7 @@ for i in range(E):
     if dist[s][t] > d:
         dist[s][t] = d
 
+#ワーシャルフロイド法 iからjまでの最短経路
 for k in range(V):
     for i in range(V):
         for j in range(V):

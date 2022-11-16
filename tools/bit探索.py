@@ -4,6 +4,10 @@ Created on Mon Jul 11 21:32:28 2022
 
 @author: 81702
 """
+#itertools product でも
+from itertools import product
+for pro in product((0,1),repeat=5):
+    print(pro)
 
 def check(A):
     count_1 = 0
@@ -28,7 +32,7 @@ def check_2(A):
         if temp>A:
             return count
 
-
+#Swiches
 N,M = map(int,input().split())
 
 ks = [[]]*M
