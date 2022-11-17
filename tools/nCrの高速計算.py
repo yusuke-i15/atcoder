@@ -1,12 +1,20 @@
 W,H = map(int,input().split())
+import math
+def comb(n, r):
+    return math.factorial(n) // (math.factorial(n - r) * math.factorial(r))
+base = comb(5,3)
 
-def nCr(n,r):
-    fac = [1]*(n+1)
-    mod = 10**9+7
-    for i in range(n):
-        fac[i+1] = fac[i]*(i+1)%mod
-    ans = fac[n]*pow(fac[r],mod-2,mod)*pow(fac[n-r],mod-2,mod)%mod
-    return ans
+def nCk(n, k):
+    under = 1
+    for x in range(1, k+1):
+        under *= x
+        under %= mod
+    over = 1
+    for x in range(n, n-k, -1):
+        over *= x
+        over %= mod
+    under = pow(under, mod-2, mod)
+    return (under%mod)*(over%mod)
 
 mod = 10 ** 9 + 7
 def comb(k):
