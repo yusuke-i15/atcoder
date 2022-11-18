@@ -5,7 +5,8 @@ N = int(input())
 xy = [list(map(int,input().split())) for i in range(N)]
 
 P = permutations(range(N),N)
-
+from itertools import product
+two = product([0, 1], repeat=4)
 temp = 0
 count = 0
 for i in P:

@@ -8,6 +8,8 @@ comb = combinations(range(M),2)
 #重複あり
 all = list(itertools.combinations_with_replacement('abc', 2))
 print(len(all))
+for i in all:
+    print(all)
 
 import itertools
 import pprint
