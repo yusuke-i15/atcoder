@@ -38,16 +38,24 @@ class UnionFind():
 #par(x):要素ｘの親頂点の番号（自身が根の場合は-1)
 #rank(x):要素ｘの属する根付き木の高さ
 #siz(x):要素ｘの属する根付き木に含まれる頂点数
-"""
-n,q = map(int,input().split())
-UF = UnionFind(n)
-for i in range(q):
-    c,x,y = map(int,input().split())
-    if c == 0:
-        UF.unite(x,y)
-    else:
-        if UF.issame(x,y):
-            print(1)
-        else:
-            print(0)
-"""
+from collections import defaultdict
+N,M,K = map(int,input().split())
+fri = defaultdict(int)
+blo = defaultdict(list)
+UF = UnionFind(N+1)
+for i in range(M):
+    a,b = map(int,input().split())
+    fri[a] += 1
+    fri[b] += 1
+    UF.unite(a,b)
+for i in range(K):
+    c,d = map(int,input().split())
+    blo[min(c,d)].append(max(c,d))
+ans = [0]*N
+for i in range(1,N+1):
+    ans[i-1] += UF.size(i) - fri[i] - 1
+    for j in blo[i]:
+        if UF.issame(i,j):
+            ans[i-1] -= 1
+            ans[j-1] -= 1
+print(*ans)
