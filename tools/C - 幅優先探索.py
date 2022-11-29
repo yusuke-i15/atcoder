@@ -21,6 +21,11 @@ while(len(q)>0):
     for i in range(4):
         next_x = v[0] + yoko[i]
         next_y = v[1] + tate[i]
+        """
+        #番兵法ないとき
+        if next_x < 0 or next_x >= H or next_y < 0 or next_y >= W:
+            continue
+        """
         if dist[next_x][next_y] == -1 and c[next_x][next_y] == ".":
             q.append((next_x,next_y))
             dist[next_x][next_y] = dist[v[0]][v[1]] + 1

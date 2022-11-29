@@ -1,3 +1,4 @@
+#O(n^0.5)
 n = int(input())
 n_s = n
 
