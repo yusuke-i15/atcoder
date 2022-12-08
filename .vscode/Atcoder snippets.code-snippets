@@ -1,0 +1,288 @@
+{
+	// Place your atcoder ワークスペース snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"Int N": {
+		"scope": "python",
+		"prefix": "inn",
+		"body": [
+			"${1:N} = int(input())",
+		],
+		"description": "int input"
+		},
+	"Map n": {
+			"scope": "python",
+			"prefix": "mn",
+			"body": [
+				"${1:a,b} = map(int,input().split())",
+				],
+			"description": "map int input()"
+			},
+	"Lis map": {
+			"scope": "python",
+			"prefix": "ln",
+			"body": [
+				"${1:A} = list(map(int,input().split()))",
+				],
+			"description": "list map int input()"
+			},
+	"List for i": {
+			"scope": "python",
+			"prefix": "fi",
+			"body": [
+				"${1:A} = list(int(input()) for i in range(${1:N}))",
+				],
+			"description": "list for int input()"
+			},
+	"List for map": {
+			"scope": "python",
+			"prefix": "fm",
+			"body": [
+				"${1:A} = [list(map(int(input())) for i in range(${1:N}))]",
+				],
+			"description": "list for map int input()"
+			},
+	"List for tuple": {
+		"scope": "python",
+		"prefix": "ft",
+		"body": [
+			"${1:AB} = [typle(int(input())) for i in range(${1:N})]",
+			],
+		"description": "list for tuple"
+		},
+	"list for string": {
+		"scope": "python",
+		"prefix": "ls",
+		"body": [
+			"${1:S} = list(input())",
+			],
+		"description": "list for s"
+		},
+	"defaultdict": {
+		"scope": "python",
+		"prefix": "dd",
+		"body": [
+			"${1:dic} = defaultdict(${2:int})",
+			],
+		"description": "default dict"
+		},
+	"import dd": {
+		"scope": "python",
+		"prefix": "idd",
+		"body": [
+			"from collections import defaultdict",
+			],
+		"description": "import defaultdict"
+		},
+	"import numpy": {
+		"scope": "python",
+		"prefix": "inp",
+		"body": [
+			"import numpy as np",
+			],
+		"description": "import numpy"
+		},
+	"import itertools": {
+		"scope": "python",
+		"prefix": "iiter",
+		"body": [
+			"import itertools",
+			],
+		"description": "import itertools"
+		},
+	"np array": {
+		"scope": "python",
+		"prefix": "npA",
+		"body": [
+			"${1:A} = np.array(${1:A})",
+			],
+		"description": "numpy array"
+		},
+	"combination": {
+		"scope": "python",
+		"prefix": "comb",
+		"body": [
+			"itertools.combinations(${1:range(M)},${2:2})",
+			],
+		"description": "combinaiton"
+		},
+	"permutation": {
+		"scope": "python",
+		"prefix": "junretu",
+		"body": [
+			"itertools.permutations(${1:range(N)},${2:N})",
+			],
+		"description": "permutation"
+		},
+	"comb_with_replace": {
+		"scope": "python",
+		"prefix": "tyouhuku",
+		"body": [
+			"list(itertools.combinations_with_replacement(${1:'abc'}, ${2:2}))",
+			],
+		"description": "cmob_with_replace"
+		},
+	"product": {
+		"scope": "python",
+		"prefix": "product",
+		"body": [
+			"itertools.product(${1:list1}, ${2:list2})",
+			],
+		"description": "product"
+		},
+	"collections": {
+		"scope": "python",
+		"prefix": "icollections",
+		"body": [
+			"import collections",
+			],
+		"description": "collect"
+		},
+	"counter": {
+	"scope": "python",
+	"prefix": "counter",
+	"body": [
+		"collections.Counter(${1:l})",
+		"# [('a', 4), ('c', 2), ('b', 1)]",
+		],
+	"description": "product"
+	},
+	"bit search": {
+		"scope": "python",
+		"prefix": "bits",
+		"body": [
+			"from itertools import product",
+			"for pro in product((0,1),repeat=${1:5}):",
+			"    print(pro)",
+			],
+		"description": "combinaiton"
+		},			
+	"runLength Encode": {
+		"scope": "python",
+		"prefix": "run",
+		"body": ["from itertools import groupby",
+			"# RUN LENGTH ENCODING str -> list(tuple())",
+			"# example) 'aabbbbaaca' -> [('a', 2), ('b', 4), ('a', 2), ('c', 1), ('a', 1)]",
+			"def runLengthEncode(S: str) -> 'list[tuple(str, int)]':",
+				"\tgrouped = groupby(S)",
+				"\tres = []",
+				"\tfor k, v in grouped:",
+				"   \t\tres.append((k, int(len(list(v)))))",
+				"\treturn res",
+			],
+		"description": "runLength Encode"
+		},
+	"zero list": {
+		"scope": "python",
+		"prefix": "lz",
+		"body": ["[0]*${1:N}",
+			],
+		"description": "zero list"
+		},
+	"zero array": {
+		"scope": "python",
+		"prefix": "zlz",
+		"body": ["[[0]*($1) for i in range($2)]",
+			],
+		"description": "zero list"
+		},
+	"impode deque": {
+		"scope": "python",
+		"prefix": "ideque",
+		"body": ["from collections import deque",
+			],
+		"description": "import deque"
+		},
+	"dict sort value": {
+		"scope": "python",
+		"prefix": "dictsortvalue",
+		"body": ["dict(sorted(${1:dic}.items(),key = lambda x:x[1]))",
+			],
+		"description": "zero list"
+		},
+	"dict sort key": {
+			"scope": "python",
+			"prefix": "dictsortkey",
+			"body": ["dict(sorted(${1:dic}.items(),key = lambda x:x[0]))",
+				],
+			"description": "sort key"
+			},
+	"print Yes": {
+		"scope": "python",
+		"prefix": "printy",
+		"body": ["print('Yes' if ${1:flag} else 'No')",
+			],
+		"description": "sort key"
+		},
+	"Union Find": {
+		"scope": "python",
+		"prefix": "union find",
+		"body": [ "class UnionFind():",
+		"    # 初期化",
+		"    def __init__(self, n):",
+		"        self.par = [-1] * n",
+		"        self.rank = [0] * n",
+		"        self.siz = [1] * n",
+		"",
+		"    # 根を求める",
+		"    def root(self, x):",
+		"        if self.par[x] == -1: return x # x が根の場合は x を返す",
+		"        else:",
+		"            self.par[x] = self.root(self.par[x]) # 経路圧縮",
+		"            return self.par[x]",
+		"",
+		"    # x と y が同じグループに属するか (根が一致するか)",
+		"    def issame(self, x, y):",
+		"        return self.root(x) == self.root(y)",
+		"",
+		"    # x を含むグループと y を含むグループを併合する",
+		"    def unite(self, x, y):",
+		"        # x 側と y 側の根を取得する",
+		"        rx = self.root(x)",
+		"        ry = self.root(y)",
+		"        if rx == ry: return False # すでに同じグループのときは何もしない",      
+		"        # union by rank",
+		"        if self.rank[rx] < self.rank[ry]: # ry 側の rank が小さくなるようにする",
+		"            rx, ry = ry, rx",
+		"        self.par[ry] = rx # ry を rx の子とする",
+		"        if self.rank[rx] == self.rank[ry]: # rx 側の rank を調整する",
+		"            self.rank[rx] += 1",
+		"        self.siz[rx] += self.siz[ry] # rx 側の siz を調整する",
+		"        return True",
+		"    ",
+		"    # x を含む根付き木のサイズを求める",
+		"    def size(self, x):",
+		"        return self.siz[self.root(x)]",
+		"",
+		"#par(x):要素ｘの親頂点の番号（自身が根の場合は-1)",
+		"#rank(x):要素ｘの属する根付き木の高さ",
+		"#siz(x):要素ｘの属する根付き木に含まれる頂点数",
+		"\"\"\"",
+		"n,q = map(int,input().split())",
+		"UF = UnionFind(n)",
+		"for i in range(q):",
+		"    c,x,y = map(int,input().split())",
+		"    if c == 0:",
+		"        UF.unite(x,y)",
+		"    else:",
+		"        if UF.issame(x,y):",
+		"            print(1)",
+		"        else:",
+		"            print(0)",
+		"\"\"\"",],
+		"description": "sort key"
+		}
+}

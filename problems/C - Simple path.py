@@ -1,31 +1,27 @@
 import sys
 sys.setrecursionlimit(10**9)
 from collections import defaultdict
+from collections import deque
+
+N,X,Y = map(int,input().split())
 G = defaultdict(list)
-E = [(0,1),(0,2),(1,3),(2,3)]
 #無向グラフ
-for i in E:
-    u = i[0]
-    v = i[1]
+for i in range(N-1):
+    u,v = map(int,input().split())
     G[u].append(v)
     G[v].append(u)
-print(G)
 
 seen = defaultdict(int)
-
-first_order = []
-last_order = []
-
+first_order = deque()
 def dfs(G,v,order):
     order += 1
     seen[v] = order
     first_order.append(v)
+    if v == Y:
+        print(*first_order)
     for next_v in G[v]:
         if seen[next_v] == 0:
             dfs(G,next_v,order)
-    last_order.append(v)
+    first_order.pop()
 order = 0
-dfs(G,0,order)
-print(first_order)
-print(last_order)
-print(seen)
+dfs(G,X,order)
