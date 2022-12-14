@@ -43,7 +43,7 @@
 			"scope": "python",
 			"prefix": "fi",
 			"body": [
-				"${1:A} = list(int(input()) for i in range(${1:N}))",
+				"${1:S} = list(int(input()) for i in range(${2:N}))",
 				],
 			"description": "list for int input()"
 			},
@@ -51,7 +51,7 @@
 			"scope": "python",
 			"prefix": "fm",
 			"body": [
-				"${1:A} = [list(map(int(input())) for i in range(${1:N}))]",
+				"${1:A} = [list(map(int,input())) for i in range(${1:N}))]",
 				],
 			"description": "list for map int input()"
 			},
