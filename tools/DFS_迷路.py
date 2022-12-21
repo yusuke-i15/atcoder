@@ -1,3 +1,4 @@
+#再帰だがらpythonの方がいいかも
 import sys
 sys.setrecursionlimit(10**9)
 from collections import defaultdict
