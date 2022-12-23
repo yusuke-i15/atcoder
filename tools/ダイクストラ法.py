@@ -1,3 +1,7 @@
+"""
+負の辺を含まない重み付きグラフの単一視点最短経路問題
+O(ElogV)
+"""
 from collections import defaultdict
 import heapq
 

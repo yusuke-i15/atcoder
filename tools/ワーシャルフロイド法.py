@@ -1,4 +1,5 @@
 #任意の2頂点の対の最短経路を求める
+#全頂点対間の最短経路をO(N^3)
 #AOJ All Pairs Shortest Path
 V,E = map(int,input().split())
 
