@@ -20,6 +20,11 @@ q = [(0,r)]
 heapq.heapify(q)
 while(len(q)>0):
     v = heapq.heappop(q)[1]
+    """
+    E-TrainではこれをつけてTLE改善
+    if seen[v] == True:
+        continue
+    """
     seen[v] = True
     for next in G[v]:
         if not seen[next[0]] and dist[next[0]] > dist[v] + next[1]:
